@@ -15,3 +15,21 @@ export const validarTelefonoBasico = (telefono) => {
         return false;
     }
 };
+export const validarPrecio = (texto) => {
+    let preRegex = /^\d+([.,]\d+)?$/;
+    if (preRegex.test(texto)) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+   export const validarDescripcion = (texto) => {
+    let descRegex = /^[a-zA-Z0-9\s.,;:'"-]+$/;
+    if (descRegex.test(texto)) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }

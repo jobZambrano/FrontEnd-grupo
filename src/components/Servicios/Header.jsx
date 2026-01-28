@@ -8,7 +8,7 @@ function Header() {
             <Link to="/datosTecnicos"><Button style={{ marginRight: "10px" }}>Tecnico</Button></Link>
             <Link to="/datosusuarios"> <Button style={{ marginRight: "10px" }}>Cliente</Button></Link>
             <Link to="/datospelicular"><Button style={{ marginRight: "10px" }}>Equipo</Button></Link>
-            <Link to="/datospelicular"> <Button style={{ marginRight: "10px" }}>Servicio</Button></Link>
+            <Link to="/datosServicios"> <Button style={{ marginRight: "10px" }}>Servicio</Button></Link>
             </center>
         </div>
     )
