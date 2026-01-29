@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { API_URL } from '../services/apirest';
-import { SoloLetras, SoloNumeros, AlfanumericoGuion } from '../utils/validaciones';
-
+import { API_URL } from "../../services/apirest";
+//import { SoloLetras, SoloNumeros, AlfanumericoGuion } from '../../utils/validaciones';
 
 const FormularioEquipos = ({ EquipoAEditar, onClose, onGuardar, notificacion }) => {
   
@@ -49,7 +48,7 @@ const FormularioEquipos = ({ EquipoAEditar, onClose, onGuardar, notificacion }) 
     setError('');
     setLoading(true);
 
-    if (SoloLetras(form.tipo_equ)){ 
+   /* if (SoloLetras(form.tipo_equ)){ 
       notificacion("Tipo no valido");
       setLoading (false);
       return
@@ -73,7 +72,7 @@ const FormularioEquipos = ({ EquipoAEditar, onClose, onGuardar, notificacion }) 
       notificacion("ID no valido");
       setLoading (false);
       return
-    }
+    }*/
 
     const token = localStorage.getItem('token');
     

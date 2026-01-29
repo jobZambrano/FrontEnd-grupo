@@ -6,6 +6,7 @@ function Dashboard1() {
             
             <Header />
             <h1>Contenido del Dashboard </h1>
+            <img src="/descarga.jpg" alt="Descripción" />
         </div>
     );
 }

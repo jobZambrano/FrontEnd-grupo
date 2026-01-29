@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { API_URL } from "../services/apirest"
+import { API_URL } from "../../services/apirest";
 
 const FormularioCliente = ({ clienteAEditar, onClose, onGuardar }) => {
   

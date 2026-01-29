@@ -47,3 +47,19 @@ padding: 10px;
 border-radius: 8px;
 box-shadow: 0 40 6px rgb(0, 0, 0,0.1);
 }
+.header-button {
+    margin-right: 15px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.header-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}

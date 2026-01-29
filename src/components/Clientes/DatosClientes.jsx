@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { API_URL } from "../services/apirest";
+import { API_URL } from "../../services/apirest";
 import FormularioCliente from "./FormularioCliente";
 import { confirm } from "../Confirmation";
+import Header from "../Servicios/Header";
 
 class DatosClientes extends React.Component {
     //codigo javasctit
@@ -112,6 +113,7 @@ class DatosClientes extends React.Component {
         return (
             <div>
                 <div className="col-10 position-absolute top-30 start-50 translate-middle-x">
+                    <Header />
                     <h1>Datos de Clientes</h1>
                     <button className="btn btn-success" onClick={this.mostrarModalNuevo}>
                         Nuevo registro

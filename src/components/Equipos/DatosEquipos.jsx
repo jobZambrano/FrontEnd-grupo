@@ -1,9 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { API_URL } from "../services/apirest";
+import { API_URL } from "../../services/apirest";
 import FormularioEquipos from "./FormularioEquipos";
-import { confirm } from "../components/Confirmation"
+import { confirm } from "../Confirmation";
+import Header from "../Servicios/Header";
 
 class DatosEquipos extends React.Component {
   //codigo javasctit
@@ -27,10 +28,12 @@ class DatosEquipos extends React.Component {
     });
   }
 
-  mostrarModalEditar = (id_equ) => {
+  mostrarModalEditar = (value) => {
+    const {EditarVariable} = this.props;
+    EditarVariable(value.id_cli,value.nombre_cli);
     this.setState({
       mostrarModal: true,
-      EquipoSeleccionado: id_equ
+      EquipoSeleccionado: value
     });
   }
 
@@ -108,6 +111,7 @@ class DatosEquipos extends React.Component {
     return (
       <div>
         <div className="col-10 position-absolute top-0 start-50 translate-middle-x mt-5">
+          <Header />
           <h1 className="text-center mb-4">Datos de Equipos</h1>
           <button className="btn btn-success" onClick={this.mostrarModalNuevo}>
             Nuevo registro
@@ -138,7 +142,7 @@ class DatosEquipos extends React.Component {
                     <td>{value.marca_equ}</td>
                     <td>{value.modelo_equ}</td>
                     <td>{value.serie_equ}</td>
-                    <td>{value.id_cli}</td>
+                    <td>{value.nombre_cli}</td>
                     <td>
                       <svg
                         onClick={() => this.mostrarModalEditar(value)}
